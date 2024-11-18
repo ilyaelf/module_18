@@ -1,0 +1,35 @@
+{% extends 'fourth_task/menu.html' %}
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}
+        {{block.super}}
+        Продукты
+        {% endblock %}</title>
+</head>
+<body>
+    <menu>
+        {% block memu %}
+        {{ block.super }}
+        {% endblock %}
+    </menu>
+    <pagename>
+        {% block pagename %}
+        {{ block.super }}
+        <h1>Продукты</h1>
+        {% endblock %}
+    </pagename>
+    <content>
+        {% block content %}
+        {{ block.super }}
+            {% for i in products %}
+                <p>{{ i }}</p><button>купить</button>
+            {% endfor %}
+        {% endblock %}
+
+    </content>
+
+    </body>
+</html>
+

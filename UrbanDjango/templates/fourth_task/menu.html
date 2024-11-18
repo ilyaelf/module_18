@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+        Title:
+        {% endblock %}
+    </title>
+</head>
+<body>
+    <pagename>
+        {% block pagename %}
+            название страницы:
+        {% endblock %}
+    </pagename>
+    <menu>
+        {% block menu %}
+        <h3><a href="/platform">Главная</a></h3>
+        <h3><a href="/products">Продукты</a></h3>
+        <h3><a href="/info">Информация</a></h3>
+        {% endblock %}
+    </menu>
+    <content>
+        {% block content %}
+        контент страницы:
+        {% endblock %}
+    </content>
+</body>
+</html>
